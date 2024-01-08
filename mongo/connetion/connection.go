@@ -9,7 +9,6 @@ import (
 )
 
 func NewConnectionMongo() (*mongo.Client, error) {
-	// uri := "mongodb+srv://root:12344321@personal.q6co5ue.mongodb.net/?retryWrites=true&w=majority"
 	uri := "mongodb://root:12344321@localhost:27017/?maxPoolSize=20&w=majority"
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
